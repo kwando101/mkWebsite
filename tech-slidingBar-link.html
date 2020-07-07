@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    padding:0;
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  body{
+    display:flex;
+    justify-content: center; 
+    align-items: center;
+    min-height:100vh;
+  }
+
+  nav{
+    position:relative;
+  }
+
+  nav a{
+    padding:1rem;
+    margin: 0 .25rem;
+    text-decoration: none;
+    color:black;
+    font-size:2rem;
+  }
+
+  #marker{
+    position:absolute;
+    left:0;
+    height:4px;
+    width:0;
+    background-color: black ;
+    bottom:-8px;
+    transition:0.5s;
+  }
+</style>
+<body>
+  <nav>
+    <div id = "marker"></div>
+    <a href="">One</a>
+    <a href="">Two</a>
+    <a href="">Three</a>
+    <a href="">Four</a>
+    <a href="">Five</a>  
+  </nav>
+  
+</body>
+<script>
+  const marker = document.querySelector("#marker");
+  const item = document.querySelectorAll("nav a");
+
+  function indicator(e){
+    marker.style.left = e.offsetLeft + "px";
+    console.log(e.offsetLeft);
+    marker.style.width = e.offsetWidth + "px";
+    console.log(e.offsetWidth);
+  }
+
+  item.forEach(link =>{
+    link.addEventListener("mouseover", (e)=>{
+      indicator(e.target);
+    })
+  })
+
+  </script>
+</html>

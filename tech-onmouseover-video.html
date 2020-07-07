@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:300px;
+  }
+  video{
+    height:300px;
+  }
+
+  #button{
+    border:1px solid black;
+    height:200px;
+    width:200px;
+  }
+
+  #button:hover, video{
+    cursor:pointer;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="video-container">
+      <video id="video" src="videos/ad-sino-assembly.mp4" poster="videos/ad-sino-cover.jpg"></video>
+    </div>
+  </div>
+  <div class="container">
+    <div id="button">
+    </div>
+  </div>
+</body>
+<script>
+
+  const video = document.getElementById("video");
+
+  video.addEventListener("mouseover", vidMouseover)
+  video.addEventListener("mouseout", vidMouseout)
+
+  function vidMouseout(){
+    this.load();
+  }
+
+  function vidMouseover(){
+    this.play();
+  }
+
+  const button = document.getElementById("button");
+
+  button.addEventListener("mouseover", mouseover);
+  button.addEventListener("mouseout", mouseout);
+
+  function mouseout(){
+    this.style.backgroundColor = "white";
+  }
+
+  function mouseover(){
+    this.style.backgroundColor = "black";
+  }
+
+</script>
+</html>

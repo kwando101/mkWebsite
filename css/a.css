@@ -1,0 +1,657 @@
+    /*core styles*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    *, body{
+      margin:0;
+      padding:0;
+      font-family:'poppins', sans-serif;
+      box-sizing: border-box;
+  }
+
+  /*header*/
+  
+  nav{
+      position:fixed;
+      width:100%;
+      background-color:white;
+    z-index: 20;
+    top:0;
+    left:0;
+  } 
+  
+  #menu-top{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .nav-bottom{
+      overflow:hidden;
+      transition: all ease .3s;
+      max-height:0;
+      display:none;
+  }
+  
+  .collapse{
+      max-height:100px;
+  }
+  
+  .nav-bar, .dropdown-menu{
+      display:flex;
+      list-style: none;
+      font-weight:bold;
+  }
+  
+  .nav-bar{
+      margin:0 1.25rem;
+      position:relative;
+  }
+
+  #marker{
+      position: absolute;
+      width:0;
+      left:0;
+      bottom:-3px;
+      background:black;
+      height:3px;
+      transition:0.5s
+  }
+
+  .logo{
+      padding:1.5rem;
+
+  }
+  
+   
+  .dropdown-item{
+      width:25%;
+      border:1px solid #eaeaea;
+      display:flex;
+  }
+  
+  .dropdown-item a{
+      text-decoration:none;
+      color: black;
+      width:100%;
+      text-align: center;
+      padding:1rem;
+  }
+  
+  .nav-item a{
+      text-decoration:none;
+      color:black;
+      padding:0.25rem;
+      margin: 0 0.5rem;
+      position:relative;
+      
+  }
+
+  
+  .nav-bar li:hover{
+      cursor:pointer;
+  }
+  
+  .landing-grid{
+      display:grid;
+      grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+      height:90vh;
+      width:100%;
+      background-repeat:no-repeat;
+      background-size:cover;
+      background-image:url("../img/horizontal-banner-a.png");
+      background-position: center;
+  }
+
+ 
+  .landing-title{
+      grid-area: 1/2/6/4;
+      display:flex;
+      align-items: center;
+      font-size:2.5rem;
+      margin:auto;
+      text-align: right;
+      padding:2.5rem;
+      max-width: 47rem;
+      color:black;
+      background-color:hsla(0,100%,100%,0.75);
+      border-bottom:5px solid black;
+      z-index: 4;
+  }
+
+  .certificates-one-row{
+        position:relative;
+      background-image:url(../img/Certificates.png);
+      background-size:contain;
+      width:350px;
+    height:100px;
+        top:93vh;
+    background-repeat: no-repeat;
+      mix-blend-mode:luminosity;
+      z-index:3;
+      transition:1s;
+  }
+
+  .icon{
+      display:none;
+      position:relative;
+      width:25px;
+      height:25px;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      right:15px;
+  }
+
+  .icon div{
+      height:7px;
+      width:100%;
+      background:black;
+      transition:0.5s;
+      border-radius:5px;
+  }
+
+  .bar1.change{
+      transform:rotate(-45deg) translate(-5px,7.75px);
+      opacity:.65;
+  }
+
+  .bar2.change{
+      opacity:0;
+  }
+
+  .bar3.change{
+      transform:rotate(45deg) translate(-5px,-7.75px);
+  }
+
+  
+  @media only screen and (max-width:750px){
+      .nav-bar li:not(:last-child){
+          display:none;
+      }
+      
+      .nav-bar li:last-child{
+          display:flex;
+      }
+
+      .nav-bar{
+          margin:0 .5rem;
+      }
+      
+      .nav-bottom{
+          display:block;
+          font-size: .75rem;
+      }
+      
+      .landing-title{
+        grid-area:1/2/6/1;
+        width:auto;
+        font-size:2.5rem;
+      }
+
+      .certificates-one-row{
+          width:20rem;
+      }
+
+      }
+    
+    
+  
+  /*Section A*/
+  .section-a{
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23aeaeae' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .content-wrap{
+      padding:5.5rem 1rem;
+      max-width:1080px;
+      margin:auto;
+      line-height:2;
+  }
+  
+  .section-a h1, .section-b h1{
+      font-size:2rem;
+      text-align: left;
+      padding:1rem;
+      font-weight:300;
+  }
+  
+  .section-a p{
+     margin-bottom:1.75rem;
+      padding:0px 1rem;
+  }
+  
+  /*Banner-A*/
+  
+  .banner-a{
+      max-width:100%;
+      margin:auto;
+      height:60vh;
+      background:lightgray;
+      
+  }
+
+  .pic-a{
+    background-image: url("../img/close-up-view-of-person-holding-a-vaccine-4047183.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .pic-b{
+    background-attachment: fixed;
+    background-image: url("../img/syringes-with-medication-on-yellow-surface-4210561.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  /*section-B*/
+    .section-b{
+        background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23aeaeae' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+border-top:1px solid lightgray;
+    }
+  .box{
+      width:100%;
+      height:200px;
+      background-position: center;
+      background-size: cover;
+  }
+
+  .pic-c{
+      background-image: url("../img/Patent Licensing.gif"); 
+  }
+
+  .pic-d{
+    background-image: url("../img/consulting.jpg"); 
+}
+
+
+  .pic-e{
+    background-image: url("../img/Manufacturing.jpg");
+  }
+  
+  .card{
+      width:30%;
+  }
+  
+  .card-description{
+      display:flex;
+      flex-direction: column;
+        background-color: white;
+      padding:1.5rem;
+      min-height:250px;
+      justify-content: space-between;
+      font-size:1rem;
+  }
+
+
+  .card-description p{
+      font-size: 0.75rem;
+  }
+
+button{
+     display:inline-block;
+     padding:10px;
+     border:none;
+     outline:none;
+     background-color: none;
+ } 
+
+
+  .card-section{
+    display:flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  
+  @media only screen and (max-width:750px){
+    .card-section{
+        display:block;
+    }
+
+    .card{
+        width:100%;
+        margin-bottom:2rem;
+    }
+
+    .card-description{
+        height:150px;
+    }
+
+    }
+ 
+/*Footer*/
+
+
+/*Page 2*/
+
+.section-c{  
+    background-image: url("../img/hand-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.page-title{
+    display:inline-flex;
+    margin-top:100px;
+    text-align: left;
+    padding:0 1rem;
+    font-size:2.5rem;
+    background-color:hsla(0,100%,100%,0.7);
+    border-bottom:4px black solid;
+    line-height: 1.4;
+}
+
+.section-a h1{
+    line-height:2.5rem;
+}
+
+.pic-f{
+    background-image:url("../img/SyringeReuse.jpg");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pic-g{
+    background-image:url("../img/giving-injection.jpeg");
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.pic-h{
+    background-image:url("../img/syringewaste.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/*page3*/
+
+.product-card{
+  
+    position:relative;
+    width:90%;
+    margin:6rem auto;
+    box-shadow: 20px 20px lightgray;
+}
+
+.product-card video{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:flex;
+}
+
+.product-video h1{
+    position: relative;
+    bottom:40px;
+    left:30px;
+    line-height: 2rem;
+    font-size: 1.5rem;
+}
+
+.product-video sup{
+    vertical-align:super;
+    font-size: xx-small;
+}
+
+.product-video h1 span{
+    font-weight: 300;
+}
+
+.product-description p{
+    padding:2rem;
+    font-size: 0.75rem;
+    height:auto;
+    color:black;
+    line-height: 1rem;
+}
+
+
+.product-description{
+    background-color: #ffffff;
+background-image:url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23aeaeae' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+border-top:1px solid lightgray;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-d{
+    background:url(../img/hand-background.png);
+    background-repeat: repeat-y;
+    background-size: contain;
+    z-index:-1;
+    width:100%;
+}
+
+.product-video{
+    height:350px;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+
+@media only screen and (max-width:750px){
+    .product-video h1{
+        font-size: 1rem;
+    }
+    }
+
+
+/*CONTACT FORM*/
+
+#popUp-area{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:radial-gradient(rgba(0,100,100,.15),rgba(100,100,100,0.15)),url("data:image/svg+xml,%3Csvg width='' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    justify-content: center;
+    transition:0.5s;
+    z-index: -1;
+    opacity:0;
+    text-align: center;
+}
+
+#popUp-area{
+    font-size: 2rem;
+}
+
+
+#popUp-area.active{
+    opacity:1;
+    z-index:15;
+}
+
+#popUp{
+    position:fixed;
+    top:100%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:40px;
+    background-blend-mode: multiply;
+    transition:0.5s;
+    opacity:0;
+    visibility: hidden;
+    width: 450px;
+}
+
+#popUp h2{
+    margin-bottom:3rem;
+}
+
+#popUp i:hover{
+    color:orangered;
+    cursor:pointer;
+}
+
+#popUp.active{
+    opacity:1;
+    top:55%;
+    visibility: visible;
+    z-index:11;
+}
+
+#popUp a{
+    display:inline-block;
+    text-decoration:none;
+    color:#fff;
+    border:1px solid black;
+    padding:10px 15px;
+    margin-top:20px;
+}
+
+
+#body-border{
+    transition:1s;
+
+}
+
+
+#body-border.active{
+    filter:blur(20px);
+}
+
+.certificates-one-row.active{
+    filter:blur(20px);
+}
+
+#popUp .form{
+    padding: 1rem 0;
+    font-size:12px;
+}
+
+
+#popUp .form .inputbox{
+    display:block;
+    padding: 1rem 0;
+    position:relative;
+    
+}
+
+
+#popUp .inputbox span{
+    position: absolute;
+    left:0;
+    pointer-events: none;
+}
+
+#popUp .inputbox input{
+    background:none;
+    border:none;
+    outline:none;
+    border-bottom: 2px solid black;
+    width:100%;
+    font-size:18px;
+    z-index:5;
+}
+
+#popUp textarea{
+    min-height:120px;
+    width:100%;
+    resize:none;
+    background:none;
+    outline:none;
+    border:none;
+    border-bottom:2px solid black;
+}
+
+
+#popUp .inputbox input:focus ~span,
+#popUp .inputbox textarea:focus ~span,
+#popUp .inputbox input:valid ~span,
+#popUp .inputbox textarea:valid ~span
+{
+    transform: translateY(-20px);
+    transition:.5s;
+    color:orangered;
+}
+
+#popUp .inputbox input[type="submit"]{
+    padding:0.5rem 0;
+    transition:0.5s;
+}
+
+#popUp .inputbox input[type="submit"]:hover{
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+.inputbox .form-button{
+    padding:0.5rem 0;
+    transition:0.5s;
+    width:100%;
+    font-size: 18px;
+    margin-top:1rem;
+    background-color: none;
+    text-align: center;
+    border-bottom:2px solid black;
+}
+
+.inputbox .form-button:hover{
+    background:black;
+    color:white;
+    cursor:pointer;
+}
+
+
+
+.contactInfo{
+    display:none;
+}
+
+/*Side Menu*/
+
+#side-menu{
+    position:fixed;
+    height:100vh;
+    width:0;
+    display:flex;
+    background-color: rgba(25,50,75,1);
+    justify-content:center;
+    align-items:center;
+    right:0;
+    transition: 0.5s;
+    z-index:10;
+    opacity:0;
+  }
+
+  #side-menu-container{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content:center;
+    position:relative;
+    width:100%;
+    height:100%;
+ 
+  }
+
+  #side-menu-container a{
+      display: inline;
+    text-decoration: none;
+    color:black;
+    padding:1rem .5rem;
+    margin:1rem 0;
+    font-size:1.5rem;
+    color:white;
+    position:relative; 
+  }
+
+  #side-menu.active{
+    width:100%;
+    opacity:1;
+  }
+  @media screen and (min-width:750px){
+    #side-menu{
+        width:0;
+        opacity:0;
+    }
+  }

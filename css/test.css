@@ -1,0 +1,113 @@
+*{
+  margin:0;
+  padding:0;
+  font-family:'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+
+/*TABS*/
+
+nav{
+  width:100%;
+  display:flex;
+  background:whitesmoke;
+}
+
+nav ul{
+  display:flex;
+}
+.tablink{
+  padding:1rem;
+  color:black;
+  font-weight:bolder;
+  font-size:1.5rem;
+  list-style: none;
+}
+
+@keyframes fadeEffect{
+  0%    {opacity:0;filter:blur(20px)}
+  50%   {opacity:0.7;filter:blur(10px)}
+  75%   {opacity:0.85;filter:blur(5px)}
+  85%   {opacity:0.95;filter:blur(2px)}
+  100%  {opacity:1;filter:blur(0px)} 
+  }
+
+
+.tabcontent-container{
+  position:absolute;
+  text-align: center;
+  width:100%;
+  max-width:60rem;
+  top:50%;
+  left:50%;
+  margin:0;
+  transform:translate(-50%,-50%);
+}
+
+.tabcontent h3{
+  font-size:2rem;
+}
+
+.tabcontent{
+  margin-top:2rem;
+  display:none;
+  animation: fadeEffect 1s;
+}
+
+.tablink.active{
+  background-color: gray;
+}
+
+#tabs{
+  position:relative;
+  height:30rem;
+  width:100%;
+  border:1px solid lightgray;
+}
+
+/*ACCORDIAN*/
+
+
+/* FORM */
+
+#form{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border:1px solid gray;
+}
+
+form{
+  margin:5rem 0;
+  padding:2rem 3rem;
+  border:1px solid gray;
+  width:30%;
+}
+
+form li{
+  list-style: none;
+  padding:1rem;
+}
+
+form label{
+  font-weight: bold;
+}
+
+form input{
+  width:100%;
+}
+
+form textarea{
+  width:100%;
+  min-height:10rem;
+  
+}
+
+form button{
+  padding:.75rem 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border:3px solid black;
+}

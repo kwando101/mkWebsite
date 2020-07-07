@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+  }
+
+  #side-menu{
+    position:fixed;
+    height:100vh;
+    width:300px;
+    display:flex;
+    border:1px solid black;
+    justify-content:flex-start;
+    align-items:center;
+    right:0;
+  }
+
+  #side-menu-container{
+    display:flex;
+    flex-direction: column;
+
+  }
+
+  #side-menu-container a{
+    text-decoration: none;
+    color:black;
+    display: block;
+    padding:1rem .5rem;
+    margin-top:1rem;    
+  }
+
+</style>
+<body>
+  <section id = "side-menu">
+    <div id = "side-menu-container">
+      <a href="">Home</a>
+      <a href="">Call To Action</a>
+      <a href="">Product</a>
+      <a href="">Contact</a>
+    </div>
+  </section>
+</body>
+</html>

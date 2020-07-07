@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <section id="tabs">
+   <nav>
+      <ul>
+        <li class="tablink">One</li>
+        <li class="tablink" onclick="activate(event, 'two')">Two</li>
+        <li class="tablink" onclick="activate(event, 'three')">Three</li>
+      </ul>
+   </nav>
+   <div class="tabcontent-container">
+      <article class="tabcontent" id="one">
+        <h3>One</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo voluptatibus necessitatibus blanditiis delectus dolorum placeat illum possimus sint voluptatum sed.</p>
+      </article>
+      <article class="tabcontent" id="two">
+        <h3>Two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam suscipit dolore recusandae blanditiis illo eligendi reiciendis esse magni fugiat.</p>
+      </article>
+      <article class="tabcontent" id="three">
+        <h3>Three</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nisi perferendis, sit autem harum alias tempora? Provident a dicta quaerat.</p>
+      </article>
+   </div>
+  </section>
+
+  <section id="accordian">
+    <div class="container">
+      <div class="accordian-bar">One</div>
+      <div class="accordian-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate iure saepe, dolore explicabo atque earum quaerat! Quisquam praesentium quod nihil!</div>
+      <div class="accordian-bar">Two</div>
+      <div class="accordian-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sunt iure dolor quis quam officia maiores sit quasi autem error.</div>
+      <div class="accordian-bar">Three</div>
+      <div class="accordian-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, odio alias. Consequuntur dolorum iste dolore quam deleniti similique suscipit tempora.</div>
+    </div>
+  </section>
+
+  <section id="form">
+    <form action="" method="POST">
+      <ul>
+        <li>
+          <label for="name">Name:</label><br><br>
+          <input type="text" id="name" name="user_name" required>
+        </li>
+        <li>
+          <label for="mail">E-mail:</label><br><br>
+          <input type="email" id="mail" name="user_email" required>
+        </li>
+        <li>
+          <label for="msg">Message:</label><br><br>
+          <textarea id="msg" name="user_message"></textarea>
+        </li>
+        <li>
+          <button type="submit">Send</button>
+        </li>
+       </ul>
+    </form>
+  </section>
+
+<script src="test.js"></script>
+</body>
+</html>

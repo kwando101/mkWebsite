@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  *{
+    margin:0;
+    padding:0;
+    font-family:arial;
+    box-sizing:border-box;
+  }
+  
+  section{
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background:lightblue;
+    border:1px solid black; 
+  }
+
+  section::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    background-color:darkseagreen;
+    opacity:0.5;
+  }
+
+  section .container{
+    display:flex;
+    min-width:1100px;
+    min-height:550px;
+    z-index: 10;
+    align-items: center;
+    position:relative;
+    justify-content: center;
+    background:#fff;
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5);
+  }
+
+  section .container .contactinfo{
+    position:absolute;
+    top:40px;
+    width:350px;
+    height:calc(100% - 80px);
+    left:calc(-350px / 2);
+    background-color:lightblue;
+    z-index:1;
+    padding:40px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow:0 20px 20px rgba(0,0,0, 0.2);
+  }
+
+  section .container .contactinfo h2{
+    font-weight:bold;
+    color:#fff;
+  }
+
+  section .container .contactinfo .info{
+    position:relative;
+    margin:20px 0px;
+  }
+  
+  section .container .contactinfo .info li{
+    position:relative;
+    list-style: none;
+    display:flex;
+    flex-direction: column;
+    margin:20px 0;
+    cursor: pointer;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  section .container .contactinfo .info li span:nth-child(1){
+    font-weight:bolder;
+    margin-bottom:.5rem; 
+  }
+
+  section .container .contactform{
+    padding:70px 50px;
+    background:#fff;
+    margin-left:150px;
+    width:calc(100% - 300px);
+    min-height:500px;
+  }
+
+  section .container .contactform h2{
+    font-size:24px;
+    font-weight:500;
+  }
+
+  section .container .contactform .formBox{
+    position:relative;
+    display:flex;
+    justify-content: space-between;
+    padding-top:30px;
+    flex-wrap: wrap;
+  }
+
+  section. .container .contactform .formBox .inputBox{
+    position:relative;
+    margin:0 0 35px 0;
+  }
+
+  section .container .contactform .formBox .inputBox.w50{
+    width:47%;
+  }
+
+  section .container .contactform .formBox .inputBox.w100{
+    width:100%;
+  }
+
+  section .container .contactform .formBox .inputBox input,
+  section .container .contactform .formBox .inputBox textarea{
+    width:100%; 
+    padding:5px 0;
+    font-size:18px;
+    font-weight:300;
+    color:#333;
+    border:none;
+    border-bottom:1px solid #777;
+    outline:none;
+    resize: none;
+  }
+
+  section .container .contactform .formBox .inputBox textarea{
+    min-height:120px;
+  }
+
+  section .container .contactform .formBox .inputBox span{
+    position:absolute;
+    left:0;
+    width:100%;
+    padding:5px 0;
+    font-size:18px;
+    font-weight:300;
+    color:#333;
+    transition:0.5s;
+    pointer-events: none;
+  }
+
+  section .container .contactform .formBox .inputBox input:focus ~span, /* focus and valid*/
+  section .container .contactform .formBox .inputBox textarea:focus ~span,
+  section .container .contactform .formBox .inputBox input:valid ~span,
+  section .container .contactform .formBox .inputBox textarea:valid ~span{
+    transform: translateY(-20px);
+    font-size:12px; 
+    font-weight:400;
+    letter-spacing: 1px;
+    color:red;
+  }
+
+  section .container .contactform . .formBox .inputBox[type="submit"]{
+    position:relative;
+    cursor:pointer;
+    background:red;
+    color:#fff;
+    border:none;
+    max-width:150px;
+    padding:12px;
+  }
+</style>
+
+<body>
+  <section>
+    <div class="container"> 
+      <div class="contactinfo">
+        <ul class="info">
+          <h2>Contact Info</h2>
+          <li>
+            <span>Location</span>
+            <span>2041-7 Jeongwang-dong<br>
+                  shieung-shi, Gyeonggi-do<br>
+                  Seoul, Korea<br>
+            </span>
+          </li>
+          <li>
+            <span>E-Mail</span>
+            <span>alphasafe@naver.com</span>
+          </li>
+          <li>
+            <span>Phone Number</span>
+            <span>++82-10-51343420</span>
+          </li>
+        </ul>
+      </div>
+      <div class="contactform">
+        <h2>Send a Message</h2>
+        <div class="formBox">
+          <div class="inputBox w50">
+            <input type="text" name="" required>
+            <span>First Name</span>
+          </div>
+        </div>
+        <div class="formBox">
+          <div class="inputBox w50">
+            <input type="text" name="" required>
+            <span>Last Name</span>
+          </div>
+        </div>
+        <div class="formBox">
+          <div class="inputBox w50">
+            <input type="text" name="" required>
+            <span>E-Mail Adress</span>
+          </div>
+        </div>
+        <div class="formBox">
+          <div class="inputBox w50">
+            <input type="text" name="" required>
+            <span>Mobile Number</span>
+          </div>
+        </div>
+        <div class="formBox">
+          <div class="inputBox w100">
+            <textarea type="text" name="" required></textarea>
+            <span>Write message here...</span>
+          </div>
+        </div>
+        <div class="formBox">
+          <div class="inputBox w50">
+            <input type="submit " value="Send">
+            <span>Send</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+</body>
+</html>
