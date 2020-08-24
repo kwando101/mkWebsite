@@ -1,3 +1,33 @@
+const nav = document.getElementsByTagName("nav")[0];
+let prevScrollpos = window.pageYOffset;
+
+const menuTop = document.querySelector("#menu-top");
+
+window.addEventListener("scroll", scrolling);
+
+window.addEventListener("scroll", navOpacity);
+
+function scrolling(){
+  let currentScrollpos = window.pageYOffset;
+  if (prevScrollpos > currentScrollpos){
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-107px";
+  }
+
+  prevScrollpos = currentScrollpos;
+}
+
+function navOpacity(){
+  if (prevScrollpos != 0){
+    nav.style.backgroundColor = "rgba(255,255,255,1)";
+  } else {
+    nav.style.backgroundColor = "rgba(255,255,255,0)";
+  }
+}
+
+
+
 function toggle(){
   const blur = document.getElementById('body-border');
 
@@ -15,7 +45,14 @@ function toggle(){
 
   blur3.classList.toggle("active");
 
+
+  if (nav.style.display === "none"){
+    nav.style.display = "flex";
+  } else {
+    nav.style.display = "none";
+  }
 }
+
 
 function toggle3(){
   const blur = document.getElementById('body-border');
@@ -29,6 +66,12 @@ function toggle3(){
   const blur3 = document.getElementById("popUp-area");
 
   blur3.classList.toggle("active");
+
+  if (nav.style.display === "none"){
+    nav.style.display = "flex";
+  } else {
+    nav.style.display = "none";
+  }
 
 }
 
@@ -54,11 +97,13 @@ function toggle2(){
 function toggleClose1(){
   toggle();
   toggle2();
+  nav.style.display="none";
 }
 
 function toggleClose2(){
   toggle3();
   toggle2();
+  nav.style.display="none";
 }
 
 
@@ -81,4 +126,6 @@ for (i=0; i < button.length; i++){
     this.style.cursor = "pointer";
   }
 }
+
+
 

@@ -3,78 +3,77 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="css/a.css">
-    <link rel="stylesheet" href="https://use.typekit.net/tul1gkg.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
-<nav id="nav">
-  <div id="menu-top">
-      <a href="" class="logo"><img src="img/mklogo-grey.svg"logo" style="width:125px"></a>
-      <ul class="nav-bar">
-          <div id="marker"></div>
-          <li class="nav-item"><a href="home.html" class="navlink">Home</a></li>
-          <li class="nav-item"><a href="Call-To-Action.html" class="navlink">Call-To-Action</a></li>
-          <li class="nav-item"><a href="product.html" class="navlink">Products</a></li>
-          <li class="nav-item"  onclick="toggle3()"><a class="navlink">Contact-Us</a></li>
-          <li class="icon" onclick="toggle2()">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-          </li>
-      </ul>
-  </div>
+<nav>
+  <a href="" class="logo"><img src="img/mklogo-grey.svg"></a>
+  <ul class="nav-bar">
+      <div id="marker"></div>
+      <li class="nav-item"><a href="home.html" class="navlink">Home</a></li>
+      <li class="nav-item"><a href="Call-To-Action.html" class="navlink">Call-To-Action</a></li>
+      <li class="nav-item"><a href="product.html" class="navlink">Products</a></li>
+      <li class="nav-item"  onclick="toggle3()"><a class="navlink">Contact-Us</a></li>
+      <li class="icon" onclick="toggle2()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </li>
+  </ul>
 </nav>
 
 <section id ="popUp-area">  
 
-    <div id="popUp">
-        <i class="far fa-times-circle" onclick="toggle3()"></i>
-        <div class="form">
-            <h2>We would love to hear from you!</h2>
-            <div class="form-container">
-                <div class="inputbox w50">
-                <input type="text" name="" required>
-                <span>First Name</span>
-                </div>
-                <div class="inputbox w50">
-                <input type="text" name="" required>
-                <span>Last Name</span>
-                </div>
-                <div class="inputbox w50">
-                <input type="text" name="" required>
-                <span>E-Mail address</span>
-                </div>
-                <div class="inputbox w50">
-                <input type="text" name="" required>
-                <span>Mobile Number</span>
-                </div>
-                <div class="inputbox w100"">
-                <textarea type="text" name="" required></textarea>
-                <span>Write your message here...</span>
-                </div>
-                <div class="inputbox w100">
-                <input type="submit" value="send" onclick =toggle()>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div id="popUp">
+      <i class="far fa-times-circle" onclick="toggle3()"></i>
+      <div class="form">
+          <h2>We would love to hear from you!</h2>
+          <div class="form-container">
+              <div class="inputbox w50">
+              <input type="text" name="" required>
+              <span>First Name</span>
+              </div>
+              <div class="inputbox w50">
+              <input type="text" name="" required>
+              <span>Last Name</span>
+              </div>
+              <div class="inputbox w50">
+              <input type="text" name="" required>
+              <span>E-Mail address</span>
+              </div>
+              <div class="inputbox w50">
+              <input type="text" name="" required>
+              <span>Mobile Number</span>
+              </div>
+              <div class="inputbox w100">
+              <textarea type="text" name="" required></textarea>
+              <span>Write your message here...</span>
+              </div>
+              <div class="inputbox w100">
+              <input type="submit" value="send" onclick =toggleClose2()>
+              </div>
+          </div>
+      </div>
+  </div>
 </section>
 <section id = "side-menu">
-  <div id = "side-menu-container">
-      <div id="sidemarker"></div>
-    <a class="sidelink" href="home.html">Home</a>
-    <a class="sidelink" href="Call-To-Action.html">Call To Action</a>
-    <a class="sidelink" href="product.html">Product</a>
-    <a class="sidelink" href="javascript:toggleClose2()">Contact</a>
+    <ul class= "side-menu-container">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Call-To-Action.html">Call-To-Action</a>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="javascript:toggleClose2()">Contact</a></li>
+    </ul>
   </div>
+</section>
 
 </section>
   <div id="body-border">
     <section class="section-c">
-      <div class="content-wrap">
+      <div class="content-wrap wrap-mod">
         <h1 class="page-title">A Call To Action: Unsafe Practices</h1>
       </div>
     </section>
@@ -82,36 +81,65 @@
       
       <div class="content-wrap">
           <p>According to the World Health Organization, unsafe injection practices are responsible for transmitting an estimated 20 million cases of hepatitis B (HBV),two million cases of hepatitis C (HCV) and approximately 260 000 cases of HIV each year. In developing and transitional nations, unsafe injections account for 32% of new HBV infections. That translates into a total of 21 million people infected needlessly through a combination of carelessness, poverty, greed, ignorance or a simple lack of resources for safe injection equipment and education.Unsafe injection practices also
-          account for the majority of new HCV infections in developing and transitional countries – adding up to a total of 40% of new cases each year. Although HIV is less readily transmissible than HBV and HCV, fully 5% of new HIV infections worldwide can be attributed to unsafe injections.3 In the Middle East and South Asia, where unsafe practices verge on the epidemic, those figures are likely to be far higher HBV, HCV and HIV are chronic conditions that lead to disease, disability and even death a number of years following initial infection. Many of those infected with HBV in early childhood will go on to develop chronic liver disease by the time they turn 30. Needless to say, this can have a dramatic effect on struggling national economies.</p>    
+          account for the majority of new HCV infections in developing and transitional countries – adding up to a total of 40% of new cases each year. Although HIV is less readily transmissible than HBV and HCV, fully 5% of new HIV infections worldwide can be attributed to unsafe injections.In the Middle East and South Asia, where unsafe practices verge on the epidemic, those figures are likely to be far higher HBV, HCV and HIV are chronic conditions that lead to disease, disability and even death a number of years following initial infection. Many of those infected with HBV in early childhood will go on to develop chronic liver disease by the time they turn 30. Needless to say, this can have a dramatic effect on struggling national economies.</p> 
+          <p>HBV, HCV and HIV viruses are common viruses found with health care workers. The less common is the list of 26 different viruses that are found to be present among health workers as a result of occupational exposure.</p>   
       </div>
   </section>
+
+  <section class="section-e">
+    <div class="content-wrap">
+      <h2 class="graph-title">20 million HBV cases <br>2 million HCV cases<br> 260,000 HIV cases <br>every year from unsafe injections.</h2>
+    </div>
+
+</section>
+
   <section class="banner-a pic-f main-grid"></section>
   <section class="section-a">
     <div class="content-wrap">
       <h1>Re-Used Syringes</h1>
-          <p>Our mission is to provide the highest quality products and services to the population. As such, we pride ourselves on strict regulations that meet all ISO, EN and FDA standards. With Growing demand for health safety, especially in developing countries, MK Ltd continue to create and transfer intellectual property to global manufacturers, in addition to providing professional design consultancy and quality engineering services.</p>
+          <p>CDC states that Healthcare providers (doctors, nurses, and anyone providing injections) should never reuse a needle or syringe either from one patient to another or to withdraw medicine from a vial. Both needle and syringe must be discarded once they have been used. It is not safe to change the needle and reuse the syringe – this practice can transmit disease.
+          </p>
+          <p>Peter Piot, a microbiologist famous for discovering Ebola in the 1970s, stated recently that the reuse of syringes in west African hospitals was a major cause of the spread of the virus at the tail end of last year.
+          </p>
+          <p>Inappropriate syringe reuse led to hep C transmission in Texas hospital an interview, the nurse reported reusing syringes in the previous six months, "erroneously believing that this was a safe, cost-saving measure if no fluids were withdrawn into the syringe before injection of the saline flush," according to the report.
+          </p>
+          <p>There are people that still re-use syringes because of convenience, due to the lack of supply, lack of education and many reasons thereof. The medical system around the world has failed injections to be safe. Innovations must be made to make injections safer.</p>
     </div>
   </section>
+  <section class="section-e">
+    <div class="content-wrap">
+      <h2 class="graph-title">There have been more than 150,000 people in the U.S. affected by unsafe injections.This led to 49 disease outbreaks including MRSA and hepatitis.</h2>
+    </div>
+</section>
   <section class="banner-a pic-g main-grid"></section>
   <section class="section-a main-grid">
       
     <div class="content-wrap">
         <h1>Needle Stick Injuries</h1>
-        <p>Our mission is to provide the highest quality products and services to the population. As such, we pride ourselves on strict regulations that meet all ISO, EN and FDA standards. With Growing demand for health safety, especially in developing countries, MK Ltd continue to create and transfer intellectual property to global manufacturers, in addition to providing professional design consultancy and quality engineering services.</p>
-        <p>With Growing demand for health safety, especially in developing countries, MK Ltd continue to create and transfer intellectual property to global manufacturers, in addition to providing professional design consultancy and quality engineering services.</p>
-        <p>We value our client feedback with the highest regard. MK Ltd focus on the importance of R &amp; D knowledge and understanding, working tirelessly to improve our procedures and processes.</p>
+        <p>Needlestick injuries are a hazard for people who work with hypodermic syringes and other needle equipment. These injuries can occur at any time when people use, disassemble, or dispose of needles. When not disposed of properly, needles can hide in linen or garbage and injure other workers who encounter them</p>
+        <p>There are over 1 million needle stick injuries just among health workers in the European Union. Risk of infection suffering a needle stick injury from contaminated needle is 1/3 Hepatitis B, 1/30 Hepatitis C and 1/500 for HIV. Also note that Hepatitis B virus can survive for a week on surfaces. There are other viruses as well that can also contaminate the cannula other than the ones that are mentioned here.
+        </p>
     </div>
 </section>
-
+<section class="section-e">
+    <div class="content-wrap">
+      <h2 class="graph-title">Needle Stick Injury from a contaminated needle is 1/3 Hepatitis B, 1/30 Hepatitis C and 1/500 for HIV</h2>
+    </div>
+</section>
 <section class="banner-a pic-h main-grid"></section>
 <section class="section-a main-grid">
       
   <div class="content-wrap">
       <h1>Unsafe Medical Waste Management</h1>
-      <p>Our mission is to provide the highest quality products and services to the population. As such, we pride ourselves on strict regulations that meet all ISO, EN and FDA standards. With Growing demand for health safety, especially in developing countries, MK Ltd continue to create and transfer intellectual property to global manufacturers, in addition to providing professional design consultancy and quality engineering services.</p>
-      <p>With Growing demand for health safety, especially in developing countries, MK Ltd continue to create and transfer intellectual property to global manufacturers, in addition to providing professional design consultancy and quality engineering services.</p>
-      <p>We value our client feedback with the highest regard. MK Ltd focus on the importance of R &amp; D knowledge and understanding, working tirelessly to improve our procedures and processes.</p>
+      <p>Injuries from sharps waste can pose a dangerous threat to the public. It is still possible for sharps waste to spread blooborne diseases when it penetrates the skin. Health care professionals are exposed to sharps waste on a daily basis. For the public to be also exposed tp these sharps can prove to be very problematic.</p>
+      <p>About 10% - 20% of needle stick injuries happen from handling disposed sharps waste. They can be found on beaches. Infectious waste bags found by children. They can be found by drug users and waste scavengers.</p>
+      <p>It is recommended by WHO that safety engineered syringes to be used to the minimize the risk of infection from needle stick injury.</p>
   </div>
+  <section class="section-e">
+    <div class="content-wrap">
+      <h2 class="graph-title">Sharps waste is classified as biohazardous waste and must be carefully handled</h2>
+    </div>
+</section>
 </div>
 
 
@@ -174,4 +202,5 @@
 
 <script src="javascript/mk.js"></script>
 <script src="javascript/slidingbar.js"></script>
+
 </html>

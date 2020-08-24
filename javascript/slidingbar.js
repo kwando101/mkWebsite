@@ -21,3 +21,4 @@ item.forEach(link =>{
 function fademarker(){
   marker.style.opacity = "0";
 }
+

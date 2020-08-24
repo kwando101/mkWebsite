@@ -12,22 +12,20 @@
 
 <body>
 
-    <nav id="nav">
-        <div id="menu-top">
-            <a href="" class="logo"><img src="img/mklogo-grey.svg"logo" style="width:125px"></a>
-            <ul class="nav-bar">
-                <div id="marker"></div>
-                <li class="nav-item"><a href="home.html" class="navlink">Home</a></li>
-                <li class="nav-item"><a href="Call-To-Action.html" class="navlink">Call-To-Action</a></li>
-                <li class="nav-item"><a href="product.html" class="navlink">Products</a></li>
-                <li class="nav-item"  onclick="toggle()"><a class="navlink">Contact-Us</a></li>
-                <li class="icon" onclick="toggle2()">
-                    <div class="bar1"></div>
-                    <div class="bar2"></div>
-                    <div class="bar3"></div>
-                </li>
-            </ul>
-        </div>
+    <nav>
+        <a href="" class="logo"><img src="img/mklogo-grey.svg"></a>
+        <ul class="nav-bar">
+            <div id="marker"></div>
+            <li class="nav-item"><a href="home.html" class="navlink">Home</a></li>
+            <li class="nav-item"><a href="Call-To-Action.html" class="navlink">Call-To-Action</a></li>
+            <li class="nav-item"><a href="product.html" class="navlink">Products</a></li>
+            <li class="nav-item"  onclick="toggle()"><a class="navlink">Contact-Us</a></li>
+            <li class="icon" onclick="toggle2()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </li>
+        </ul>
     </nav>
 
     <section id ="popUp-area">  
@@ -36,43 +34,46 @@
             <i class="far fa-times-circle" onclick="toggle()"></i>
             <div class="form">
                 <h2>We would love to hear from you!</h2>
-                <div class="form-container">
+                <form class="form-container" name="contactForm.php" method="POST">
                     <div class="inputbox w50">
-                    <input type="text" name="" required>
+                    <input type="text" name="fname" required>
                     <span>First Name</span>
                     </div>
                     <div class="inputbox w50">
-                    <input type="text" name="" required>
+                    <input type="text" name="lname" required>
                     <span>Last Name</span>
                     </div>
                     <div class="inputbox w50">
-                    <input type="text" name="" required>
+                    <input type="text" name="eMail" required>
                     <span>E-Mail address</span>
                     </div>
                     <div class="inputbox w50">
-                    <input type="text" name="" required>
+                    <input type="text" name="number" required>
                     <span>Mobile Number</span>
                     </div>
-                    <div class="inputbox w100"">
-                    <textarea type="text" name="" required></textarea>
+                    <div class="inputbox w100">
+                    <textarea type="text" name="message" required></textarea>
                     <span>Write your message here...</span>
                     </div>
                     <div class="inputbox w100">
-                    <input type="submit" value="send" onclick =toggle()>
+                    <input type="submit" name ="submit" value="send">
+                    <!-- After pressing submit the contact form must slide-fade out and input must be cleared out. Also a new slide must come in saying the message has been sent thank you. If there is an error netlify server side will send an error-->
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </section>
-    <section id = "side-menu">
-        <div id = "side-menu-container">
-            <div id="sidemarker"></div>
-          <a class="sidelink" href="home.html">Home</a>
-          <a class="sidelink" href="Call-To-Action.html">Call To Action</a>
-          <a class="sidelink" href="product.html">Product</a>
-          <a class="sidelink" href="javascript:toggleClose1()">Contact</a>
-        </div>
-    </section>
+<!-- In the questions -->
+<section id = "side-menu">
+    <ul class= "side-menu-container">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="Call-To-Action.html">Call-To-Action</a>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="javascript:toggleClose2()">Contact</a></li>
+    </ul>
+  </div>
+</section>
+
     <div class="certificates-one-row" id="popUp2"></div>
 
 <div id="body-border">
@@ -83,6 +84,7 @@
 </header>
 
 <main>
+    <!--The images must be swtiched to our products-->
     <section class="section-a main-grid">
         <div class="content-wrap">
             <h1>Our Mission</h1>
@@ -97,7 +99,15 @@
     <section class="section-a main-grid">
         <div class="content-wrap">
             <h1>Our Goals</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla numquam minima molestias, magni reiciendis tempora blanditiis, nihil adipisci quos sed autem, quasi minus excepturi placeat explicabo. Nulla accusamus dignissimos, ab distinctio neque sit, aut reiciendis, qui, quia perferendis debitis excepturi.</p>
+            <p>With the emergence of the corona virus in 2020, it has brought to attention to the world on how a virus can spread and affect everyone lives. There is a need more ever to keep our injections safe from any more unecessary infections from the contamination of viruses and to be able to administer the vaccine for viruses safely. </p>
+            <ul>
+                <li>To develop a fresh patent for a new safety syringe which is scheduled to be finished this year.
+                </li>
+                <li>To expand our product list according to our business strategies.
+                </li>
+                <li>Set-up a Manufacturing Base in South East Asia</li>
+            </ul>
+
         </div>
     </section>
     
@@ -109,34 +119,41 @@
 
             <section class="card-section">
                 <div class="card">
-                    <div class="box pic-c"></div>
                     <div class="card-description">
+                        <div class="box pic-c"></div>
                         <div class="card-description-top">
                             <h3>Patent Licensing</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum necessitatibus nostrum mollitia earum dolore provident reiciendis, fuga tenetur laudantium iste.</p>
+                            <p>We also have experience in registering a patent in foreign countries. We also give out patent licenses for our own patents for our business partners that would like to manufacture or sell our patented product to other countries.
+                            </p>
                         </div>
-                        <button onclick="toggle()">Inquire</button>
+                        
                     </div>
+                    <button onclick="toggle()">Inquire</button>
                 </div>
                 <div class="card">
-                    <div class="box pic-d"></div>
+                    
                     <div class="card-description">
+                        <div class="box pic-d"></div>
                         <div class="card-description-top">
                             <h3>Consultation</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolor consequatur, vel! Odit, ipsam, earum.</p>
+                            <p>Our consultation is based on over 40 years of experience in safety injection medical device experience and business networking in South East Asia. We know how to sell, manufacture and administer such a project.
+                            </p>
                         </div>
-                        <button onclick="toggle()">Inquire</button>
+                        
                     </div>
+                    <button onclick="toggle()">Inquire</button>
                 </div>
-                <div class="card">
-                    <div class="box pic-e"></div>
+                <div class="card">    
                     <div class="card-description">
+                        <div class="box pic-e"></div>
                         <div class="card-description-top">
-                            <h3>Manufacturing</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed, atque.</p>
+                        <h3>Manufacturing</h3>
+                        <p>We have the know how to set up a syringe manufacturing plant according GMP standards. We have the technical know-how to make the machines as well as having the experience in setting up quality systems.
+                        </p>
                         </div>
-                        <button onclick="toggle()">Inquire</button>
+                        
                     </div>
+                    <button onclick="toggle()">Inquire</button>
                 </div>
             </section>
         </div>

@@ -18,6 +18,9 @@ tabs.forEach(element => {
 
 })
 
+function activate3(){
+  
+}
 
 function activate(evt, number){
 

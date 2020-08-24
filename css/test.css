@@ -71,18 +71,22 @@ nav ul{
 /* FORM */
 
 #form{
-  display:flex;
-  align-items: center;
-  justify-content: center;
+  position:relative;
   border:1px solid gray;
+  height:40rem;
 }
 
 form{
-  margin:5rem 0;
+  position:fixed;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
   padding:2rem 3rem;
-  border:1px solid gray;
-  width:30%;
+  width:90vw;
+  transition:0.5s;
 }
+
+
 
 form li{
   list-style: none;
@@ -95,12 +99,19 @@ form label{
 
 form input{
   width:100%;
+  border:none;
+  outline:none;
+  border-bottom:3px solid black;
+  padding:0.5rem 0;
+
 }
 
 form textarea{
   width:100%;
   min-height:10rem;
-  
+  border:3px solid black;
+  outline:none;
+  padding:0.5rem;
 }
 
 form button{
@@ -109,5 +120,12 @@ form button{
 
 form input:focus,
 form textarea:focus {
-  border:3px solid black;
+  outline:none;
+  background:whitesmoke;
+}
+
+@media only screen and (max-width:450px){
+  form{
+    width:100vw;
+  }
 }
